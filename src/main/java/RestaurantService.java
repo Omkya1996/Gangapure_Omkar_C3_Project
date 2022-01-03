@@ -33,7 +33,9 @@ public class RestaurantService {
     
     public int getTotalOrderValue(List<Item> items) {
         int totalOrderValue = 0;
-        
+        for(Item item: items) {
+            totalOrderValue = totalOrderValue + item.getPrice();
+        }
         return totalOrderValue;
     }
 }
