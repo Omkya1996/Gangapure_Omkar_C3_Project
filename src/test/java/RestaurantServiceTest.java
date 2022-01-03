@@ -59,4 +59,14 @@ class RestaurantServiceTest {
         service.addRestaurant("Pumpkin Tales","Chennai",LocalTime.parse("12:00:00"),LocalTime.parse("23:00:00"));
         assertEquals(initialNumberOfRestaurants + 1,service.getRestaurants().size());
     }
+    
+    @Test
+    public void calling_get_Total_Order_Value_should_return_total_order_value() throws restaurantNotFoundException {
+        List<Item> itemsList = new ArrayList<>();
+        Item item1 = new Item("Coffee", 300);
+        itemsList.add(item1);
+        Item item2 = new Item("Sandwich", 200);
+        itemsList.add(item2);
+        assertEquals(500, service.getTotalOrderValue(itemsList));
+    }
 }

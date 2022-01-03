@@ -30,4 +30,10 @@ public class RestaurantService {
     public List<Restaurant> getRestaurants() {
         return restaurants;
     }
+    
+    public int getTotalOrderValue(List<Item> items) {
+        int totalOrderValue = 0;
+        
+        return totalOrderValue;
+    }
 }
